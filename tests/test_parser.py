@@ -11,5 +11,9 @@ def test_response_func():
 def test_get_job_lins():
 	expect = "<class 'list'>"
 	p = parser.Parser('https://www.freelancer.com/jobs#')
-	assert len(p.get_job_lins()) > 0 
-	assert str(type(p.get_job_lins())) == expect
+	assert len(p.get_job_links()) > 0 
+	assert str(type(p.get_job_links())) == expect
+
+def test_get_all_info():
+	p = parser.Parser('https://www.freelancer.com/jobs#')
+	assert len(p.get_all_info()) > 0 
