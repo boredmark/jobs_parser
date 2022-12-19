@@ -5,6 +5,11 @@ import parser
 
 def test_response_func():
 	expect = 200
-	p = parser.Parser('https://www.linkedin.com')
+	p = parser.Parser('https://www.freelancer.com/jobs/')
 	assert p.get_response().status_code == expect
 
+def test_get_job_lins():
+	expect = "<class 'list'>"
+	p = parser.Parser('https://www.freelancer.com/jobs#')
+	assert len(p.get_job_lins()) > 0 
+	assert str(type(p.get_job_lins())) == expect
