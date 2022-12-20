@@ -1,4 +1,4 @@
-# Jobs Parer
+# Jobs Parser
 
 ## Features
 
